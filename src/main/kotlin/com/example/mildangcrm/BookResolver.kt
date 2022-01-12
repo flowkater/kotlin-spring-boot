@@ -1,7 +1,6 @@
 package com.example.mildangcrm
 
 import graphql.kickstart.tools.GraphQLQueryResolver
-import graphql.kickstart.tools.GraphQLResolver
 import org.springframework.stereotype.Component
 
 @Component

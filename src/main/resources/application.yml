@@ -15,3 +15,35 @@ graphiql:
   cdn:
     enabled: false
     version: latest
+
+server:
+  shutdown: graceful
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+  jpa:
+    show-sql: true
+    #    database-platform: mysql
+    hibernate:
+      ddl-auto: none
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3308/mildang-crm?serverTimezone=UTC&characterEncoding=UTF-8
+      username: mildang
+      password: mildang
+  flyway:
+    user: mildang
+    password: mildang
+    schemas: mildang-crm
+    url: jdbc:mysql://localhost:3306/order?serverTimezone=UTC&characterEncoding=UTF-8
+    enabled: true
+
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-console
+
+logging:
+  config: classpath:logback-local.xml

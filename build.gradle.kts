@@ -32,10 +32,17 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compileOnly("org.projectlombok:lombok")
+    // MapStruct
+    implementation("org.mapstruct:mapstruct:1.4.2.Final")
+    annotationProcessor("org.mapstruct:mapstruct-processor:1.4.2.Final")
+
+    implementation("com.google.guava:guava:28.2-jre")
+    implementation("org.apache.commons:commons-lang3:3.9")
+
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.h2database:h2")
     runtimeOnly("mysql:mysql-connector-java")
-    annotationProcessor("org.projectlombok:lombok")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
